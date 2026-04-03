@@ -86,7 +86,7 @@ def switching_time_constraint_3(needle_vars, *args):
     dh_coord = -dc/2 +l0 -t*np.sin((np.pi-gamma)/2)
 
     return -dh_coord
-#2.4) SW = SWITCHING TIME constraint --> the needle enters from one side (it doesn't work now)
+#2.4) SW = SWITCHING TIME constraint --> the needle enters from one side
 def switching_time_constraint_4(needle_vars, *args):
     s0, l0, dc = needle_vars
     gamma, lio, ww, lambda_weights, an = args
@@ -100,7 +100,7 @@ def switching_time_constraint_4(needle_vars, *args):
     Id_Ia = [ein*np.cos(np.pi-(np.pi-gamma)/2), ein*np.sin(np.pi-(np.pi-gamma)/2)]
 
     return 1 - np.inner(Id_Ia,Id_Ei)/t**2
-#2.5) SW = SWITCHING TIME constraint --> the needle exits from the other side (it doesn't work now)
+#2.5) SW = SWITCHING TIME constraint --> the needle exits from the other side
 def switching_time_constraint_5(needle_vars, *args):
     s0, l0, dc = needle_vars
     gamma, lio, ww, lambda_weights, an = args
@@ -205,12 +205,8 @@ if feasible_terms:
     delta = np.abs(feasible_terms)
     delta_max = np.max(delta, axis=0)   #useful for normalization
     delta_min = np.min(delta, axis=0)   #useful for normalization
-    #print("Maximum and minimum values of DELTA terms:")
-    #for i, (max_val, min_val) in enumerate(zip(delta_max, delta_min)):
-    #    print(f"terms[{i}]: Max = {max_val:.2f}, Min = {min_val:.2f}")
-    # beta_in, e_in, dh, sn, beta_out, e_out
 else:
-    print("Nessuna soluzione valida trovata.")
+    print("No valid solution found.")
 
 # COST FUNCTION BUILDING WITH COMPUTED DELTAs
 def cost_function_brute(needle_vars, gamma, lio, ww, lambda_weights, an, delta_min, delta_max):
@@ -232,7 +228,7 @@ def cost_function_brute(needle_vars, gamma, lio, ww, lambda_weights, an, delta_m
     if not needle_depth(needle_vars, gamma, lio, ww, lambda_weights, an) >=0:
         return np.inf
     
-    # Calcolo dei termini
+    # Variables computation
     s0, l0, dc = needle_vars
     alpha_1 = np.arcsin(np.clip(
         2 * np.sin(gamma / 2) / dc * (l0 - np.tan((np.pi - gamma) / 2) * (lio / 2 + s0)),
@@ -275,7 +271,7 @@ for an in an_values:
         ranges=ranges,
         args=(gamma, lio, ww, lambda_weights, an, delta_min, delta_max),
         full_output=True,
-        finish= fmin,   #find local minimum
+        finish= fmin,   
         Ns=Ns,
         disp = True
     )

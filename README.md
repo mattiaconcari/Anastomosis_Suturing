@@ -1,7 +1,7 @@
 # Robotic Anastomosis: Trajectory & Geometry Evaluation 🤖🪡
 
 ![Suturing Simulation](simulation_env.png)
-*Caption: Pybullet simulation environment for needle insertion and tissue interaction.*
+*Pybullet simulation environment for needle insertion and tissue interaction.*
 
 ## 📌 Project Overview
 This repository contains the configuration of a computational workflow designed to evaluate robotic suturing kinematics. The primary goal is to simulate the insertion of a surgical needle into soft tissue, setting up an optimization routine to find the most suitable needle geometry and entry trajectory.

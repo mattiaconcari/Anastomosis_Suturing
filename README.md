@@ -1,6 +1,6 @@
 # Robotic Anastomosis: Trajectory & Geometry Evaluation 🤖🪡
 
-![Suturing Simulation](inserisci_qui_il_link_della_tua_immagine_o_gif)
+![Suturing Simulation](simulation_env.png)
 *Caption: Pybullet simulation environment for needle insertion and tissue interaction.*
 
 ## 📌 Project Overview

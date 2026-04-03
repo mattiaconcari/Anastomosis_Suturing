@@ -1,4 +1,3 @@
-#%% buca o non buca
 import pybullet as p
 import pybullet_data
 import numpy as np

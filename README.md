@@ -11,7 +11,7 @@ This repository contains the configuration of a computational workflow designed 
 * Adaptation of kinematic optimization routines to compute the needle geometry parameters, minimizing simulated tissue damage.
 * Extraction and visualization of trajectory data to evaluate the robustness of the optimized outcome.
 
-📄 **[Click here to read the full Technical Report (PDF)](inserisci_qui_il_nome_del_tuo_file_pdf.pdf)** for a detailed breakdown of the kinematics, the mathematical formulation, and the simulation parameters.
+📄 **[Click here to read the full Technical Report (PDF)](Robotic_Anastomosis_Report.pdf)** for a detailed breakdown of the kinematics, the mathematical formulation, and the simulation parameters.
 
 ---
 

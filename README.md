@@ -1,4 +1,5 @@
 # Robotic Anastomosis: Trajectory & Geometry Evaluation 🤖🪡
+*Academic Project | Politecnico di Milano | Oct. 2024 - Feb. 2025*
 
 ![Suturing Simulation](simulation_env.png)
 *Pybullet simulation environment for needle insertion and tissue interaction.*
